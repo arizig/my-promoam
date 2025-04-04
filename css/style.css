@@ -1,0 +1,88 @@
+/* RESET CSS - réinitialisation des marges et des bordures */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Conteneur principal de la promo */
+.promo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Conteneur des cartes */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Card de chaque apprenant */
+.card {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00aaff;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animation d'apparition des cartes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Effet hover sur les cartes */
+.card:hover {
+    transform: scale(1.1);
+    background-color: #005f73;
+}
+
+/* Styles responsive : Tablette et Desktop */
+@media (min-width: 600px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
