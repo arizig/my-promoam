@@ -46,13 +46,20 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00aaff;
-    color: white;
+    background-color: rgb(197, 127, 127);
+
     font-size: 1.5em;
     border-radius: 10px;
+    
+    border: solid;
+    border-color: red;
     transition: transform 0.3s ease, background-color 0.3s ease;
     opacity: 0;
     animation: fadeIn 1s forwards;
+    
+}
+p{
+    color: white;
 }
 
 /* Animation d'apparition des cartes */
@@ -64,11 +71,24 @@ h1 {
         opacity: 1;
     }
 }
+h1{
+    text-decoration: underline;
+}
+.nom{
+    color:red;
+    display:none;
+}
 
 /* Effet hover sur les cartes */
 .card:hover {
     transform: scale(1.1);
-    background-color: #005f73;
+    background-color: white;
+}
+.card:hover p{
+    display:none;
+}
+.card:hover .nom{
+    display: block;
 }
 
 /* Styles responsive : Tablette et Desktop */
